@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../webapp/static/js/thymeleaf.js"></script>
+</head>
+<body>
+    <form action="${find==null?/insert:/update}" method="post">
+        <input type="hidden" name="sid" th:value="${find.sid}">
+        名称：<input name="sname" th:value="${find.sname}"><br>
+        年龄：<input name="age" th:value="${find.age}"><br>
+        cid：<input name="cid" th:value="${find.cid}"><br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
